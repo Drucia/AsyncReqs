@@ -27,7 +27,7 @@ async def make_req_async(reqs):
                 pass
 
 def make_request(word):
-    return f"http://localhost:8983/solr/MemCore/select?q=content%3A*{word}*";
+    return f"http://localhost:8983/solr/MemCore/select?q=image%3A*{word}*%0Ayear%3A*{word}*%0Atitle%3A*{word}*%0Acategory%3A*{word}*%0Acontent%3A*{word}*%0Aurl%3A*{word}*%0Astatus%3A*{word}*%0Aid%3A*{word}*";
 
 def get_req_to_search():
     with open('random_words.txt', 'r') as reader:
